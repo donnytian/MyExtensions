@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConversionTests.cs" />
+    <Compile Include="CountingTests.cs" />
     <Compile Include="ManipulationTests.cs" />
     <Compile Include="PatternMatchTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,6 +7,11 @@
     <Company />
     <Product />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Provides useful extension methods for System.String.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard1.3\Extensions.String.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

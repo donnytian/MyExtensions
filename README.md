@@ -1,2 +1,2 @@
 # MyExtensions
-Provide useful extension methods for .NET basic types.
+Provides useful extension methods for .NET basic types.
