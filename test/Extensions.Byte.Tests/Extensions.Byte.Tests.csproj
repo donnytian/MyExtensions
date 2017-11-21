@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C278584D-3A23-4BBF-B11E-8FA9E983FC22}</ProjectGuid>
+    <ProjectGuid>{C70229EB-D283-4183-B4EA-5BBC62A2BDF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Extensions.String.Tests</RootNamespace>
-    <AssemblyName>Extensions.String.Tests</AssemblyName>
+    <RootNamespace>Extensions.Byte.Tests</RootNamespace>
+    <AssemblyName>Extensions.Byte.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -56,13 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConversionTests.cs" />
-    <Compile Include="CountingTests.cs" />
-    <Compile Include="ManipulationTests.cs" />
-    <Compile Include="PatternMatchTests.cs" />
+    <Compile Include="MathTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QueryStringTests.cs" />
-    <Compile Include="ValidationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\xunit.runner.json">
@@ -72,13 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Extensions.String\Extensions.String.csproj">
-      <Project>{46e61847-a9d5-4dd4-a5c4-d7f3c08a5f0d}</Project>
-      <Name>Extensions.String</Name>
+    <ProjectReference Include="..\..\Extensions.Byte\Extensions.Byte.csproj">
+      <Project>{c8bd6336-b495-4abd-991f-69d542993969}</Project>
+      <Name>Extensions.Byte</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
