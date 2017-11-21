@@ -1,17 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <Version>0.0.3</Version>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <Version>0.0.1</Version>
     <Authors>Donny Tian</Authors>
     <Company />
     <Product />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Provides useful extension methods for System.String.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard1.3\Extensions.String.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard1.0\Extensions.Byte.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
