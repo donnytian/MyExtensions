@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Extensions.String
 {
@@ -27,6 +29,23 @@ namespace Extensions.String
         }
 
         /// <summary>
+        /// Checks whether the given sub-string can be located within the input string.
+        /// </summary>
+        /// <param name="enumerable">The input strings to be checked.</param>
+        /// <param name="value">The sub-string to be searched.</param>
+        /// <param name="comparsonType">The string comparison type.</param>
+        /// <returns>True if sub-string found; otherwise false.</returns>
+        public static bool Contains(this IEnumerable<string> enumerable, string value, StringComparison comparsonType)
+        {
+            if (enumerable == null)
+            {
+                return false;
+            }
+
+            return enumerable.Any(s => string.Compare(s, value, comparsonType) == 0);
+        }
+
+        /// <summary>
         /// Indicates whether the specified string is null or an <see cref="F:System.String.Empty" /> string.
         /// </summary>
         /// <param name="s">The string to test. </param>
@@ -38,7 +57,7 @@ namespace Extensions.String
         /// </summary>
         /// <param name="s">The string to test.</param>
         /// <returns>true if the <paramref name="s" /> parameter is null or <see cref="F:System.String.Empty" />, or if <paramref name="s" /> consists exclusively of white-space characters. </returns>
-        public static bool IsNullOrWhiteSpace(string s) => string.IsNullOrWhiteSpace(s);
+        public static bool IsNullOrWhiteSpace(this string s) => string.IsNullOrWhiteSpace(s);
 
         /*
          * IsInteger

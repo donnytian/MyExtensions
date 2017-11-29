@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
-    <Version>0.0.3</Version>
+    <Version>0.0.5</Version>
     <Authors>Donny Tian</Authors>
     <Company />
     <Product />
