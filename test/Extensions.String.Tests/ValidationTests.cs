@@ -13,13 +13,7 @@ namespace Extensions.String.Tests
         [InlineData("this is a test", "TeSt", StringComparison.InvariantCulture, false)]
         public void ContainsTests(string s, string subString, StringComparison comparison, bool result)
         {
-            // Arrange
-
-            // Act
-            var b = s.Contains(subString, comparison);
-
-            // Assert
-            Assert.Equal(result, b);
+            AssertBool(() => s.Contains(subString, comparison), result);
         }
 
         [Theory]
@@ -30,13 +24,27 @@ namespace Extensions.String.Tests
         [InlineData(new[] { "Bob", "Alice", "Carl" }, "alice", StringComparison.CurrentCulture, false)]
         public void EnumerableContainsTests(IEnumerable<string> enumerable, string value, StringComparison comparison, bool result)
         {
-            // Arrange
+            AssertBool(() => enumerable.Contains(value, comparison), result);
+        }
 
-            // Act
-            var b = enumerable.Contains(value, comparison);
+        [Theory]
+        [InlineData("d", StringComparison.OrdinalIgnoreCase, new[] { "Bob", "Alice", "Carl" }, false)]
+        [InlineData(null, StringComparison.OrdinalIgnoreCase, new[] { "Bob", "Alice", null }, true)]
+        [InlineData(null, StringComparison.OrdinalIgnoreCase, new[] { "Me" }, false)]
+        [InlineData("CARL", StringComparison.CurrentCultureIgnoreCase, new[] { "Bob", "Alice", "Carl" }, true)]
+        [InlineData("alice", StringComparison.CurrentCulture, new[] { "Bob", "Alice", "Carl" }, false)]
+        public void EqualsAny(string s, StringComparison comparison, string[] targets, bool expected)
+        {
+            AssertBool(() => s.EqualsAny(comparison, targets), expected);
+        }
+
+        private static void AssertBool(Func<bool> action, bool expected)
+        {
+            // Arrange, Act
+            var actual = action();
 
             // Assert
-            Assert.Equal(result, b);
+            Assert.Equal(expected, actual);
         }
     }
 }

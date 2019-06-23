@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.String", "Extensions.String\Extensions.String.csproj", "{46E61847-A9D5-4DD4-A5C4-D7F3C08A5F0D}"
 EndProject
@@ -20,10 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		GlobalSuppressions.cs = GlobalSuppressions.cs
 		README.md = README.md
 		stylecop.json = stylecop.json
-		xunit.runner.json = xunit.runner.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Byte", "Extensions.Byte\Extensions.Byte.csproj", "{C8BD6336-B495-4ABD-991F-69D542993969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Byte", "Extensions.Byte\Extensions.Byte.csproj", "{C8BD6336-B495-4ABD-991F-69D542993969}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Byte.Tests", "test\Extensions.Byte.Tests\Extensions.Byte.Tests.csproj", "{C70229EB-D283-4183-B4EA-5BBC62A2BDF2}"
 EndProject
